@@ -1,0 +1,6 @@
+user: laraonex3,
+password: laraonex3,
+IP:122.169.107.233/32,
+connection-string: mongodb+srv://laraonex3:laraonex3@cluster0.fbs6arx.mongodb.net/?retryWrites=true&w=majority
+
+monogDB ID pass: MymongoDB@741
