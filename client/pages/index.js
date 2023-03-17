@@ -5,9 +5,17 @@ import styles from '@/styles/Home.module.css'
 import { Container, AppBar, Typography, Grow, Grid } from "@mui/material"
 import Posts from "./components/posts/Posts"
 import Form from "./components/form/Form"
+import { useEffect } from "react"
+
+// Redux
+import { useDispatch } from "react-redux"
+import {getPosts} from './redux/actions/posts'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const dispatch = useDispatch()
+
+  useEffect(()=>{dispatch(getPosts)},[dispatch])
   return (
     <>
       <Head>
@@ -23,7 +31,7 @@ export default function Home() {
           </AppBar>
           <Grow in>
             <Container>
-              <Grid type="container" justify="space-between" alignItems="stretch" spacing={3}>
+              <Grid type="container" justify="space-between" alignItems="stretch">
                 <Grid item xs={12} sm={7}>
                   <Posts />
                 </Grid>
